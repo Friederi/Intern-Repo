@@ -1,0 +1,232 @@
+2025-05-12 16:20:16 [INFO] Question: What are the top 5 most frequently occurring product names?
+2025-05-12 16:20:16 [INFO] Running PandaAI with bamboo_llm LLM...
+2025-05-12 16:20:16 [INFO] Prompt ID: f75be547-7f49-4637-bc58-e92638ba221a
+2025-05-12 16:20:16 [INFO] Generating new code...
+2025-05-12 16:20:23 [INFO] Code Generated:
+# import the required dependencies
+import pandas as pd
+
+# Write SQL query to get the top 5 most frequently occurring product names
+sql_query = """
+    SELECT product_name, COUNT(*) as count 
+    FROM table_fa96d3208036ee75ff4c0e6d64de30fb 
+    GROUP BY product_name 
+    ORDER BY count DESC
+    LIMIT 5
+"""
+
+# Use the execute_sql_query function to get data
+data = execute_sql_query(sql_query)
+
+# Declare result var
+result = { "type": "dataframe", "value": data }
+2025-05-12 16:20:23 [INFO] Validating code requirements...
+2025-05-12 16:20:23 [INFO] Code validation successful.
+2025-05-12 16:20:23 [INFO] Cleaning the generated code...
+2025-05-12 16:20:23 [INFO] Executing code: import pandas as pd
+sql_query = """
+    SELECT product_name, COUNT(*) as count 
+    FROM table_fa96d3208036ee75ff4c0e6d64de30fb 
+    GROUP BY product_name 
+    ORDER BY count DESC
+    LIMIT 5
+"""
+data = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': data}
+2025-05-12 16:20:24 [INFO] Response generated successfully.
+2025-05-12 16:25:04 [INFO] Running PandaAI with bamboo_llm LLM...
+2025-05-12 16:25:04 [INFO] Prompt ID: 5ac877fb-3a92-4e55-83d1-058b5f945156
+2025-05-12 16:25:04 [INFO] Generating new code...
+2025-05-12 16:25:12 [INFO] Validating code requirements...
+2025-05-12 16:25:12 [INFO] Code validation successful.
+2025-05-12 16:25:12 [INFO] Cleaning the generated code...
+2025-05-12 16:25:12 [INFO] Response generated successfully.
+2025-05-12 16:25:50 [INFO] Running PandaAI with bamboo_llm LLM...
+2025-05-12 16:25:50 [INFO] Prompt ID: e816fb4b-5363-433d-a81b-fcb5f0636bf5
+2025-05-12 16:25:50 [INFO] Generating new code...
+2025-05-12 16:25:56 [INFO] Validating code requirements...
+2025-05-12 16:25:56 [INFO] Code validation successful.
+2025-05-12 16:25:56 [INFO] Cleaning the generated code...
+2025-05-12 16:25:56 [INFO] Response generated successfully.
+2025-05-12 17:30:40 [INFO] Question: What are the top 5 most frequently occurring product names?
+2025-05-12 17:30:41 [INFO] Running PandaAI with bamboo_llm LLM...
+2025-05-12 17:30:41 [INFO] Prompt ID: 5dc100f0-aae7-413f-99cf-aa5637101043
+2025-05-12 17:30:41 [INFO] Generating new code...
+2025-05-12 17:30:49 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+def execute_sql_query(sql_query: str) -> pd.Dataframe:
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+    # code to connect to the database and execute the query goes here
+    pass
+
+# sql query to find the top 5 most frequently occurring product names
+sql_query = "SELECT product_name, COUNT(*) as count FROM table_fa96d3208036ee75ff4c0e6d64de30fb GROUP BY product_name ORDER BY count DESC LIMIT 5"
+
+# execute the query and store the result in a dataframe
+df = execute_sql_query(sql_query)
+
+# Declare result var: 
+result = { "type": "dataframe", "value": df }
+2025-05-12 17:30:49 [INFO] Validating code requirements...
+2025-05-12 17:30:49 [INFO] Code validation successful.
+2025-05-12 17:30:49 [INFO] Cleaning the generated code...
+2025-05-12 17:30:49 [INFO] Executing code: import pandas as pd
+sql_query = 'SELECT product_name, COUNT(*) as count FROM table_fa96d3208036ee75ff4c0e6d64de30fb GROUP BY product_name ORDER BY count DESC LIMIT 5'
+df = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': df}
+2025-05-12 17:30:50 [INFO] Response generated successfully.
+2025-05-12 17:31:02 [INFO] Running PandaAI with bamboo_llm LLM...
+2025-05-12 17:31:02 [INFO] Prompt ID: e9ed8aef-1e8e-4302-bd35-2c7ef0790621
+2025-05-12 17:31:02 [INFO] Generating new code...
+2025-05-12 17:31:10 [INFO] Validating code requirements...
+2025-05-12 17:31:10 [INFO] Code validation successful.
+2025-05-12 17:31:10 [INFO] Cleaning the generated code...
+2025-05-12 17:31:10 [INFO] An error occurred during code generation: Query uses unauthorized table: table_fa96d3208036e75ff4c0e6d64de30fb.
+2025-05-12 17:31:10 [INFO] Stack Trace:
+Traceback (most recent call last):
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\base.py", line 38, in generate_code
+    return self.validate_and_clean_code(code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\base.py", line 58, in validate_and_clean_code
+    return self._code_cleaner.clean_code(code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 150, in clean_code
+    node = self._validate_and_make_table_name_case_sensitive(node)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 76, in _validate_and_make_table_name_case_sensitive
+    sql_query = self._clean_sql_query(node.value.value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 63, in _clean_sql_query
+    return self._replace_table_names(sql_query, table_names, allowed_table_names)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 48, in _replace_table_names
+    raise MaliciousQueryError(
+pandasai.exceptions.MaliciousQueryError: Query uses unauthorized table: table_fa96d3208036e75ff4c0e6d64de30fb.
+
+2025-05-12 17:31:10 [INFO] Execution failed with error: Traceback (most recent call last):
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\agent\base.py", line 159, in generate_code_with_retries
+    return self.generate_code(query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\agent\base.py", line 104, in generate_code
+    code = self._code_generator.generate_code(prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\base.py", line 47, in generate_code
+    raise e
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\base.py", line 38, in generate_code
+    return self.validate_and_clean_code(code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\base.py", line 58, in validate_and_clean_code
+    return self._code_cleaner.clean_code(code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 150, in clean_code
+    node = self._validate_and_make_table_name_case_sensitive(node)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 76, in _validate_and_make_table_name_case_sensitive
+    sql_query = self._clean_sql_query(node.value.value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 63, in _clean_sql_query
+    return self._replace_table_names(sql_query, table_names, allowed_table_names)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 48, in _replace_table_names
+    raise MaliciousQueryError(
+pandasai.exceptions.MaliciousQueryError: Query uses unauthorized table: table_fa96d3208036e75ff4c0e6d64de30fb.
+
+2025-05-12 17:31:16 [INFO] Validating code requirements...
+2025-05-12 17:31:16 [INFO] Code validation successful.
+2025-05-12 17:31:16 [INFO] Cleaning the generated code...
+2025-05-12 17:31:16 [INFO] An error occurred during code generation: Query uses unauthorized table: table_fa96d3208036e75ff4c0e6d64de30fb.
+2025-05-12 17:31:16 [INFO] Stack Trace:
+Traceback (most recent call last):
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\agent\base.py", line 159, in generate_code_with_retries
+    return self.generate_code(query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\agent\base.py", line 104, in generate_code
+    code = self._code_generator.generate_code(prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\base.py", line 47, in generate_code
+    raise e
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\base.py", line 38, in generate_code
+    return self.validate_and_clean_code(code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\base.py", line 58, in validate_and_clean_code
+    return self._code_cleaner.clean_code(code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 150, in clean_code
+    node = self._validate_and_make_table_name_case_sensitive(node)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 76, in _validate_and_make_table_name_case_sensitive
+    sql_query = self._clean_sql_query(node.value.value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 63, in _clean_sql_query
+    return self._replace_table_names(sql_query, table_names, allowed_table_names)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 48, in _replace_table_names
+    raise MaliciousQueryError(
+pandasai.exceptions.MaliciousQueryError: Query uses unauthorized table: table_fa96d3208036e75ff4c0e6d64de30fb.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\base.py", line 38, in generate_code
+    return self.validate_and_clean_code(code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\base.py", line 58, in validate_and_clean_code
+    return self._code_cleaner.clean_code(code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 150, in clean_code
+    node = self._validate_and_make_table_name_case_sensitive(node)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 76, in _validate_and_make_table_name_case_sensitive
+    sql_query = self._clean_sql_query(node.value.value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 63, in _clean_sql_query
+    return self._replace_table_names(sql_query, table_names, allowed_table_names)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 48, in _replace_table_names
+    raise MaliciousQueryError(
+pandasai.exceptions.MaliciousQueryError: Query uses unauthorized table: table_fa96d3208036e75ff4c0e6d64de30fb.
+
+2025-05-12 17:31:16 [INFO] Retrying Code Generation (1/3)...
+2025-05-12 17:31:16 [INFO] Execution failed with error: Traceback (most recent call last):
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\agent\base.py", line 159, in generate_code_with_retries
+    return self.generate_code(query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\agent\base.py", line 104, in generate_code
+    code = self._code_generator.generate_code(prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\base.py", line 47, in generate_code
+    raise e
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\base.py", line 38, in generate_code
+    return self.validate_and_clean_code(code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\base.py", line 58, in validate_and_clean_code
+    return self._code_cleaner.clean_code(code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 150, in clean_code
+    node = self._validate_and_make_table_name_case_sensitive(node)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 76, in _validate_and_make_table_name_case_sensitive
+    sql_query = self._clean_sql_query(node.value.value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 63, in _clean_sql_query
+    return self._replace_table_names(sql_query, table_names, allowed_table_names)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Intern-Repo\Huy\JupyterNoteBook\.venv\Lib\site-packages\pandasai\core\code_generation\code_cleaning.py", line 48, in _replace_table_names
+    raise MaliciousQueryError(
+pandasai.exceptions.MaliciousQueryError: Query uses unauthorized table: table_fa96d3208036e75ff4c0e6d64de30fb.
+
+2025-05-12 17:31:24 [INFO] Validating code requirements...
+2025-05-12 17:31:24 [INFO] Code validation successful.
+2025-05-12 17:31:24 [INFO] Cleaning the generated code...
+2025-05-12 17:31:24 [INFO] Response generated successfully.
+2025-05-12 17:31:46 [INFO] Running PandaAI with bamboo_llm LLM...
+2025-05-12 17:31:46 [INFO] Prompt ID: 04fa446d-1793-4c37-b1a0-aa0f841e1f19
+2025-05-12 17:31:46 [INFO] Generating new code...
+2025-05-12 17:31:55 [INFO] Validating code requirements...
+2025-05-12 17:31:55 [INFO] Code validation successful.
+2025-05-12 17:31:55 [INFO] Cleaning the generated code...
+2025-05-12 17:31:55 [INFO] Response generated successfully.
