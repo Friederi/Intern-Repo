@@ -1,0 +1,10 @@
+{
+    "﻿\"注文番号\"": "order_id",
+    "備考": {
+        "前回受注番号": "order_previous_id",
+        "製本仕様": "product_postpress_type_name"
+    },
+    "得意先名": "order_customer_name",
+    "品名": "product_name",
+    "部品": "part_type_name"
+}
