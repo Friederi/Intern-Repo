@@ -2,9 +2,11 @@
 <ddash>
   <order_template_attributes>
     <order_id>FBdemo00001</order_id>
+    <order_previous_id></order_previous_id>
     <order_customer_name>CL社</order_customer_name>
     <product_template_attributes>
       <product_name>CL社オズの魔法使い</product_name>
+      <product_postpress_type_name></product_postpress_type_name>
       <product_delivery_template_attributes/>
       <part_template_attributes>
         <part_type_name>表紙</part_type_name>
@@ -14,9 +16,11 @@
   </order_template_attributes>
   <order_template_attributes>
     <order_id>FBdemo00001</order_id>
+    <order_previous_id></order_previous_id>
     <order_customer_name>CL社</order_customer_name>
     <product_template_attributes>
       <product_name>CL社オズの魔法使い</product_name>
+      <product_postpress_type_name></product_postpress_type_name>
       <product_delivery_template_attributes/>
       <part_template_attributes>
         <part_type_name>本文1</part_type_name>
@@ -26,9 +30,11 @@
   </order_template_attributes>
   <order_template_attributes>
     <order_id>FBdemo00001</order_id>
+    <order_previous_id></order_previous_id>
     <order_customer_name>CL社</order_customer_name>
     <product_template_attributes>
       <product_name>CL社オズの魔法使い</product_name>
+      <product_postpress_type_name></product_postpress_type_name>
       <product_delivery_template_attributes/>
       <part_template_attributes>
         <part_type_name>表紙</part_type_name>
@@ -38,9 +44,11 @@
   </order_template_attributes>
   <order_template_attributes>
     <order_id>FBdemo00001</order_id>
+    <order_previous_id></order_previous_id>
     <order_customer_name>CL社</order_customer_name>
     <product_template_attributes>
       <product_name>CL社オズの魔法使い</product_name>
+      <product_postpress_type_name></product_postpress_type_name>
       <product_delivery_template_attributes/>
       <part_template_attributes>
         <part_type_name>本文1</part_type_name>
@@ -50,9 +58,11 @@
   </order_template_attributes>
   <order_template_attributes>
     <order_id>FBdemo00001</order_id>
+    <order_previous_id></order_previous_id>
     <order_customer_name>CL社</order_customer_name>
     <product_template_attributes>
       <product_name>CL社オズの魔法使い</product_name>
+      <product_postpress_type_name></product_postpress_type_name>
       <product_delivery_template_attributes/>
       <part_template_attributes>
         <part_type_name>表紙</part_type_name>
@@ -62,9 +72,11 @@
   </order_template_attributes>
   <order_template_attributes>
     <order_id>FBdemo00001</order_id>
+    <order_previous_id></order_previous_id>
     <order_customer_name>CL社</order_customer_name>
     <product_template_attributes>
       <product_name>CL社オズの魔法使い</product_name>
+      <product_postpress_type_name></product_postpress_type_name>
       <product_delivery_template_attributes/>
       <part_template_attributes>
         <part_type_name>表紙</part_type_name>
@@ -74,9 +86,11 @@
   </order_template_attributes>
   <order_template_attributes>
     <order_id>FBdemo00001</order_id>
+    <order_previous_id></order_previous_id>
     <order_customer_name>CL社</order_customer_name>
     <product_template_attributes>
       <product_name>CL社オズの魔法使い</product_name>
+      <product_postpress_type_name></product_postpress_type_name>
       <product_delivery_template_attributes/>
       <part_template_attributes>
         <part_type_name>本文1</part_type_name>
@@ -86,9 +100,11 @@
   </order_template_attributes>
   <order_template_attributes>
     <order_id>FBdemo00001</order_id>
+    <order_previous_id></order_previous_id>
     <order_customer_name>CL社</order_customer_name>
     <product_template_attributes>
       <product_name>CL社オズの魔法使い</product_name>
+      <product_postpress_type_name></product_postpress_type_name>
       <product_delivery_template_attributes/>
       <part_template_attributes>
         <part_type_name></part_type_name>
@@ -98,9 +114,11 @@
   </order_template_attributes>
   <order_template_attributes>
     <order_id>FBdemo00001</order_id>
+    <order_previous_id></order_previous_id>
     <order_customer_name>CL社</order_customer_name>
     <product_template_attributes>
       <product_name>CL社オズの魔法使い</product_name>
+      <product_postpress_type_name></product_postpress_type_name>
       <product_delivery_template_attributes/>
       <part_template_attributes>
         <part_type_name>表紙</part_type_name>
@@ -110,9 +128,11 @@
   </order_template_attributes>
   <order_template_attributes>
     <order_id>FBdemo00001</order_id>
+    <order_previous_id></order_previous_id>
     <order_customer_name>CL社</order_customer_name>
     <product_template_attributes>
       <product_name>CL社オズの魔法使い</product_name>
+      <product_postpress_type_name></product_postpress_type_name>
       <product_delivery_template_attributes/>
       <part_template_attributes>
         <part_type_name>本文1</part_type_name>
