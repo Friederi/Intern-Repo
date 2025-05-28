@@ -1,0 +1,6 @@
+{
+  "input_bucket": "csvtoxmlinput",
+  "input_csv_key": "csv/input_job.csv",
+  "input_mapping_key": "json/input_mapping_dict.json",
+  "output_bucket": "csvtoxmlintermediate"
+}

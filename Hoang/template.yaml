@@ -1,0 +1,79 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Step Function connect 2 Lambda Function
+
+Globals:
+  Function:
+    Timeout: 30
+    Runtime: python3.11
+
+Resources:
+
+  #Define Lambda Basic Information Conversion
+  BasicInformationFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: Basic_information_conversion
+      CodeUri: BasicInformationConversion/lambda_package/
+      Handler: app.lambda_handler
+  #Define Lambda Conversion Csv to Xml
+  CsvToXmlFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: Conversion_csv_to_xml
+      CodeUri: ConversionCsvToXml/lamda_package/
+      Handler: app.lambda_handler
+
+  #IAM role for Step Function, allowing it to invoke Lambda functions
+  StepFunctionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: states.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: AllowInvokeLambda
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - lambda:InvokeFunction
+                Resource: "*"
+          PolicyName: AllowS3Access
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                Resource:
+                 - arn:aws:s3:::my-test-bucket/*
+                 - arn:aws:s3:::my-output-bucket/*
+
+  # Define AWS Step Function to connect 2 Lambda functions
+  CsvToXmlStepFunction:
+    Type: AWS::Serverless::StateMachine
+    Properties:
+      Role: !GetAtt StepFunctionRole.Arn
+      Definition:
+        StartAt: BasicInformation
+        States:
+          BasicInformation:
+            Type: Task
+            Resource: !GetAtt BasicInformationFunction.Arn
+            Next: ConvertToXml
+          ConvertToXml:
+            Type: Task
+            Resource: !GetAtt CsvToXmlFunction.Arn
+            End: true
+
+Outputs:
+  StateMachineArn:
+    Description: ARN of Step Function
+    Value: !Ref CsvToXmlStepFunction
