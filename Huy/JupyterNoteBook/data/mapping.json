@@ -1,0 +1,14 @@
+{
+  "order_id": {
+    "csvColumn": "注文番号"
+  },
+  "product_name": {
+    "csvColumn": "プロダクト名"
+  },
+  "part_type_name": {
+    "csvColumn": "部品名"
+  },
+  "order_previous_id": {
+    "csvColumn": "受注備考"
+  }
+}

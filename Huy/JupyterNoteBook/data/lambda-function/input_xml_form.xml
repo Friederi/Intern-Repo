@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ddash">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="order_template_attributes" minOccurs="1" >
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="order_id" type="xs:string" minOccurs="1" />
+              <xs:element name="order_previous_id" type="xs:string" minOccurs="0" />
+              <xs:element name="order_accept_number" type="xs:string" minOccurs="0" />
+              <xs:element name="order_accept_datetime" type="xs:string" minOccurs="0" />
+              <xs:element name="order_customer_master_id" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="order_customer_name" type="xs:string" minOccurs="0" />
+              <xs:element name="order_customer_zip_code" type="xs:string" minOccurs="0" />
+              <xs:element name="order_customer_phone_number" type="xs:string" minOccurs="0" />
+              <xs:element name="order_sales_user_department" type="xs:string" minOccurs="0" />
+              <xs:element name="order_sales_user_name" type="xs:string" minOccurs="0" />
+              <xs:element name="order_subtotal_amount" type="xs:string" minOccurs="0" />
+              <xs:element name="order_estimation_number" type="xs:string" minOccurs="0" />
+              <xs:element name="order_memo" type="xs:string" minOccurs="0" />
+              <xs:element name="product_template_attributes" minOccurs="1" >
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="product_id" type="xs:string" minOccurs="0" />
+                    <xs:element name="product_management_user_id" type="xs:string" minOccurs="0" />
+                    <xs:element name="product_management_user_name" type="xs:string" minOccurs="0" />
+                    <xs:element name="product_name" type="xs:string" minOccurs="0" />
+                    <xs:element name="product_name_kana" type="xs:string" minOccurs="0" />
+                    <xs:element name="product_master_id" type="xs:string" minOccurs="0" />
+                    <xs:element name="product_final_size_master_id" type="xs:string" minOccurs="0" />
+                    <xs:element name="product_final_size_master_name" type="xs:string" minOccurs="0" />
+                    <xs:element name="product_vertical_final_size_mm" type="xs:unsignedByte" minOccurs="0" />
+                    <xs:element name="product_horizontal_final_size_mm" type="xs:unsignedByte" minOccurs="0" />
+                    <xs:element name="product_weight_g" type="xs:unsignedByte" minOccurs="0" />
+                    <xs:element name="product_quantities" type="xs:unsignedByte" minOccurs="0" />
+                    <xs:element name="product_ordered_quantities" type="xs:unsignedByte" minOccurs="1" />
+                    <xs:element name="product_external_aux_quantities" type="xs:unsignedByte" minOccurs="0" />
+                    <xs:element name="product_internal_aux_quantities" type="xs:unsignedByte" minOccurs="0" />
+                    <xs:element name="product_postpress_type_name" type="xs:string" minOccurs="0" />
+                    <xs:element name="product_extended_size_master_id" type="xs:string" minOccurs="0" />
+                    <xs:element name="product_extended_size_master_name" type="xs:string" minOccurs="0" />
+                    <xs:element name="product_vertical_extended_size" type="xs:string" minOccurs="0" />
+                    <xs:element name="product_horizontal_extended_size" type="xs:string" minOccurs="0" />
+                    <xs:element name="product_delivery_template_attributes">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="delivery_id" type="xs:string" minOccurs="0" />
+                          <xs:element name="product_delivery_quantities" type="xs:unsignedByte" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="part_template_attributes" minOccurs="1" >
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="part_seq" type="xs:unsignedByte" minOccurs="0" />
+                          <xs:element name="part_type_id" type="xs:string" minOccurs="1" />
+                          <xs:element name="part_type_name" type="xs:string" minOccurs="0" />
+                          <xs:element name="part_original_file_path" type="xs:string" minOccurs="0" />
+                          <xs:element name="part_original_data_pages" type="xs:unsignedByte" minOccurs="0" />
+                          <xs:element name="part_quantities" type="xs:unsignedByte" minOccurs="0" />
+                          <xs:element name="part_external_aux_quantities" type="xs:unsignedByte" minOccurs="0" />
+                          <xs:element name="part_internal_aux_quantities" type="xs:unsignedByte" minOccurs="0" />
+                          <xs:element name="part_final_size_master_id" type="xs:string" minOccurs="0" />
+                          <xs:element name="part_final_size_master_name" type="xs:string" minOccurs="0" />
+                          <xs:element name="part_media_master_name" type="xs:string" minOccurs="0" />
+                          <xs:element name="part_colorant_front_number" type="xs:unsignedByte" minOccurs="0" />
+                          <xs:element name="part_colorant_back_number" type="xs:unsignedByte" minOccurs="0" />
+                          <xs:element name="part_memo" type="xs:string" minOccurs="0" />
+                          <xs:element name="platemaking_process_template_attributes" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="platemaking_process_id" minOccurs="0" />
+                                <xs:element name="platemaking_process_name" minOccurs="0" />
+                                <xs:element name="platemaking_process_planned_start_datetime" minOccurs="0" />
+                                <xs:element name="platemaking_process_planned_end_datetime" minOccurs="0" />
+                                <xs:element name="platemaking_process_memo" minOccurs="0" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="prepress_process_template_attributes" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="prepress_process_id" minOccurs="0" />
+                                <xs:element name="prepress_process_name" minOccurs="0" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="print_process_template_attributes" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="print_process_id" type="xs:string" minOccurs="0" />
+                                <xs:element name="print_process_name" type="xs:string" minOccurs="0" />
+                                <xs:element name="print_process_planned_device_id" type="xs:unsignedByte" minOccurs="0" />
+                                <xs:element name="print_process_planned_device_name" type="xs:string" minOccurs="0" />
+                                <xs:element name="print_process_prepress_imposition_number" type="xs:unsignedByte" minOccurs="0" />
+                                <xs:element name="print_process_press_imposition_number" type="xs:unsignedByte" minOccurs="0" />
+                                <xs:element name="print_process_quantities" type="xs:unsignedByte" minOccurs="0" />
+                                <xs:element name="print_process_sheets" type="xs:unsignedByte" minOccurs="0" />
+                                <xs:element name="print_process_paper_weight_gsm" type="xs:string" minOccurs="0" />
+                                <xs:element name="print_process_colorant_front_number" type="xs:unsignedByte" minOccurs="0" />
+                                <xs:element name="print_process_colorant_back_number" type="xs:unsignedByte" minOccurs="0" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="postpress_process_template_attributes" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="postpress_process_id" type="xs:string" minOccurs="0" />
+                                <xs:element name="postpress_process_name" type="xs:string" minOccurs="0" />
+                                <xs:element name="postpress_process_planned_device_id" type="xs:unsignedByte" minOccurs="0" />
+                                <xs:element name="postpress_process_master_id" type="xs:string" minOccurs="0" />
+                                <xs:element name="postpress_process_master_name" type="xs:string" minOccurs="0" />
+                                <xs:element name="postpress_process_bookbinding_adjustment_value" type="xs:unsignedByte" minOccurs="0" />
+                                <xs:element name="postpress_process_bookbinding_trimming_offset_mm" type="xs:unsignedByte" minOccurs="0" />
+                                <xs:element name="postpress_process_bookbinding_milling_depth_mm" type="xs:unsignedByte" minOccurs="0" />
+                                <xs:element name="postpress_process_stitch_number" type="xs:unsignedByte" minOccurs="0" />
+                                <xs:element name="postpress_process_staple_shape" type="xs:string" minOccurs="0" />
+                                <xs:element name="postpress_process_uses_glue" type="xs:unsignedByte" minOccurs="0" />
+                                <xs:element name="postpress_process_vertical_temporary_size_mm" type="xs:unsignedByte" minOccurs="0" />
+                                <xs:element name="postpress_process_vertical_final_size_mm" type="xs:unsignedByte" minOccurs="0" />
+                                <xs:element name="postpress_process_horizontal_final_size_mm" type="xs:unsignedByte" minOccurs="0" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="delivery_template_attributes" minOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="delivery_seq" type="xs:unsignedByte" minOccurs="0" />
+                    <xs:element name="delivery_id" type="xs:string" minOccurs="0" />
+                    <xs:element name="delivery_planned_shipping_start_datetime" type="xs:string" minOccurs="0" />
+                    <xs:element name="delivery_planned_shipping_end_datetime" type="xs:string" minOccurs="1" />
+                    <xs:element name="delivery_planned_delivery_datetime" type="xs:string" minOccurs="0" />
+                    <xs:element name="delivery_customer_name" type="xs:string" minOccurs="0" />
+                    <xs:element name="delivery_zip_code" type="xs:string" minOccurs="0" />
+                    <xs:element name="delivery_phone_number" type="xs:string" minOccurs="0" />
+                    <xs:element name="delivery_supplier_master_id" type="xs:string" minOccurs="0" />
+                    <xs:element name="delivery_supplier_master_name" type="xs:string" minOccurs="0" />
+                    <xs:element name="delivery_case_quantities" type="xs:unsignedByte" minOccurs="0" />
+                    <xs:element name="delivery_packing_type_master_id" type="xs:string" minOccurs="0" />
+                    <xs:element name="delivery_packing_type_master_name" type="xs:string" minOccurs="0" />
+                    <xs:element name="delivery_destination" type="xs:string" minOccurs="0" />
+                    <xs:element name="delivery_requester" type="xs:string" minOccurs="0" />
+                    <xs:element name="delivery_memo" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:decimal" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
